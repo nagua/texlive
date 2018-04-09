@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# The installer specification
+# >wget http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/tlnet/tlpkg/texlive.tlpdb
+
+# Inside the specification lines beginning with "name collection" are used inside the profile
+# >grep "^name collection"
+
+# To remove the "name" in front of each line to copy into the profile
+# >sed "s/name//"
+
+curl -vs http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/tlnet/tlpkg/texlive.tlpdb 2>&1 | grep "^name collection"

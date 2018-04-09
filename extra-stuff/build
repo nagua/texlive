@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /data
+latexmk -lualatex -output-directory=./output Ausarbeitung-docker.tex
