@@ -38,4 +38,5 @@ RUN mkdir -p install-getnonfreefonts \
     && texlua install-getnonfreefonts \
     && cd .. && rm -r install-getnonfreefonts \
     && /usr/local/texlive/2017/bin/x86_64-linux/getnonfreefonts --sys -a
+RUN luaotfload-tool --update
 CMD /bin/bash
